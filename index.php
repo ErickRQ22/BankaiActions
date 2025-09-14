@@ -41,7 +41,7 @@
     <!-- Header con desarrolladores -->
     <header class="gradient-bg text-white py-8 px-4">
         <div class="container mx-auto text-center">
-            <h1 class="text-4xl font-bold mb-2 animate-pulse">Sistema de Registro de Clientes</h1>
+            <h1 class="text-4xl font-bold mb-2 animate-pulse">Sistema de Registro de Clientes UEES</h1>
             <p class="text-xl mb-8">ColibriHub - Soluciones Tecnológicas</p>
         </div>
     </header>
