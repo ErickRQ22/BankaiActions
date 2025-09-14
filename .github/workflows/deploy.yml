@@ -1,0 +1,36 @@
+name: Deploy PHP App to VPS
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Descargar el código del repositorio
+        uses: actions/checkout@v3
+
+      - name: Copiar archivos al VPS
+        uses: appleboy/scp-action@v0.1.7
+        with:
+          host: ${{ secrets.SSH_HOST }}
+          username: devops
+          key: ${{ secrets.SSH_KEY }}
+          source: "."                         
+          target: "/home/devops/appPHP"       
+
+      - name: Reconstruir y reiniciar contenedor PHP
+        uses: appleboy/ssh-action@v0.1.10
+        with:
+          host: ${{ secrets.SSH_HOST }}
+          username: devops
+          key: ${{ secrets.SSH_KEY }}
+          script: |
+            cd /home/devops/appPHP
+            docker stop php-app-container || true
+            docker rm php-app-container || true
+            docker build -t app-php .
+            docker run -d --name php-app-container -p 90:80 app-php
