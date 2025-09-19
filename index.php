@@ -51,7 +51,7 @@
         <div class="max-w-4xl mx-auto bg-white rounded-xl shadow-2xl overflow-hidden card-hover animate-fadeIn" style="animation-delay: 0.6s;">
             <!-- Encabezado del formulario -->
             <div class="bg-gradient-to-r from-blue-600 to-purple-600 p-6 text-white">
-                <h2 class="text-2xl font-bold">Formulario de Registro UEES</h2>
+                <h2 class="text-2xl font-bold">Formulario de Registro UEES ESTUDIANTE</h2>
                 <p class="opacity-90">Complete la información del nuevo cliente UEES</p>
             </div>
             
