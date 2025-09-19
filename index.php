@@ -59,7 +59,7 @@
                 <?php
                 // Procesar el formulario cuando se envía
                 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-                    $url = 'http://192.168.43.32:8090/api/clientes';
+                    $url = 'http://179.5.156.34:8090/api/clientes';
                     
                     // Recoger y sanitizar datos del formulario
                     $data = [
